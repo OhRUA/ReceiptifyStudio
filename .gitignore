@@ -1,0 +1,26 @@
+# 虚拟环境
+venv/
+
+# PyInstaller 产物
+build/
+dist/
+*.spec
+
+# 运行时渲染输出
+output/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 开发调试脚本（下划线前缀，不参与发布）
+_*.py
+
+# 未采用的测试素材
+assets/tex_*.png
+assets/ref_wrinkled.png
+
+# 工具状态目录与临时文件
+.local/
+gh_login_out.txt
