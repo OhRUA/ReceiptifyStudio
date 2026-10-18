@@ -3,8 +3,8 @@
 把网易云 / QQ音乐 / Spotify / Apple Music 歌单、iTunes 搜索、手动输入的歌单，渲染成一张**像用手机拍的复古热敏打印小票**的长图 PNG。
 Turn playlists from NetEase Music / QQ Music / Spotify / Apple Music, iTunes search, or manual input into a **retro thermal-print receipt** long-image (PNG) that looks like it was photographed.
 
-纸面带有做旧复古质感（柔和纸纹 + 撕边锯齿 + 条形码 + 等宽打印体），一键导出长图。
-The paper carries a worn, vintage look (soft paper texture + torn perforated edges + barcode + monospace type) — all in one click.
+纸面带有做旧复古质感（柔和纸纹 + 平直边缘 + 条形码 + 等宽打印体），一键导出长图。
+The paper carries a worn, vintage look (soft paper texture + clean straight edges + barcode + monospace type) — all in one click.
 
 ![效果示例 / Preview](docs/screenshot.png)
 
@@ -18,7 +18,7 @@ The paper carries a worn, vintage look (soft paper texture + torn perforated edg
 
 - **多种导入方式**：粘贴网易云 / QQ音乐 / Spotify / Apple Music 歌单（或网易云单曲）链接、搜索 iTunes、手动输入文本
 - **中转蓄水池架构**：网络抓取的数据只以纯文本写入文本框，你可以在渲染前任意增删改；即使断网也能手动打字继续使用
-- **做旧纸面质感**：程序化叠加柔和纸纹与轻微做旧阴影，每次渲染随机分布；撕边锯齿、条形码、等宽字体、超长歌名自动换行（时长跟随末行）、固定宽度版式
+- **做旧纸面质感**：程序化叠加柔和纸纹与轻微做旧阴影，每次渲染随机分布；平直边缘、条形码、等宽字体、超长歌名自动换行（时长跟随末行）、固定宽度版式
 - **完整可变字段**：标题 / 订单 / 日期 / 歌曲表 / 统计 / CARD# / AUTH CODE / CARDHOLDER / 平台名——全部随导入数据生成，也可手动改
 - **纯本地运行**：不上传任何数据；一键打包为单个 exe
 
@@ -108,7 +108,7 @@ MIT © 2026 OhRUA
 
 - **Multiple input methods**: paste a playlist link from NetEase Music / QQ Music / Spotify / Apple Music (or a NetEase song link), search iTunes, or type text manually
 - **Reservoir-textbox architecture**: fetched data enters the UI as plain text only, so you can edit everything before rendering — and the app keeps working offline
-- **Worn paper texture**: programmatic soft paper grain and subtle aged shading, randomly distributed per render; torn perforated edges, barcode, monospace fonts, long titles auto-wrap (duration aligns with the last line), fixed-width layout
+- **Worn paper texture**: programmatic soft paper grain and subtle aged shading, randomly distributed per render; clean straight edges, barcode, monospace fonts, long titles auto-wrap (duration aligns with the last line), fixed-width layout
 - **Fully editable fields**: title / order / date / song table / totals / CARD# / AUTH CODE / CARDHOLDER / platform — all generated from your imported data, all manually editable
 - **100% local**: no data is uploaded; package into a single exe with one command
 

@@ -169,7 +169,7 @@ def _draw_mixed(draw, xy, text, mono_font, cjk_font, fill, probe):
 
 
 # ============================================================
-# 四、锯齿撕边蒙版（复古小票的灵魂）
+# 四、边缘蒙版（当前版本：平直直线；如需复古锯齿撕边可调用 _zigzag_mask）
 # ============================================================
 def _zigzag_mask(width: int, height: int, tooth_h: int = 26, tooth_w: int = 18) -> Image.Image:
     """
@@ -637,10 +637,10 @@ def render_receipt(text: str) -> Image.Image:
     # 超出部分填充为黑色（就是之前小票底部"长方形黑边"的来源）
     img = img.crop((0, 0, canvas_w, min(y + margin, total_h)))
 
-    # ---------- 应用锯齿撕边蒙版，输出 RGBA ----------
+    # ---------- 输出 RGBA：边缘为平直直线（不再应用锯齿撕边蒙版） ----------
     w, h = img.size
     rgba = img.convert("RGBA")
-    rgba.putalpha(_zigzag_mask(w, h))
+    rgba.putalpha(Image.new("L", (w, h), 255))   # 全不透明 = 平直边缘
     return rgba
 
 
